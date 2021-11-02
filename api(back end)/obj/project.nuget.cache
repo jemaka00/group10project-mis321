@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "eMgoHgfAfKaM+1hcT5B1q3To+KHg1ioe9UMJomxQvTQFqc8twhFka+VK0N4zvruoGmei7pgKgeRbshTfFmE7Jg==",
+  "success": true,
+  "projectFilePath": "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api(back end).csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jemak\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jemak\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jemak\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\jemak\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\jemak\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\jemak\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

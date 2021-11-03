@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api(back end).csproj": {}
+    "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api.csproj": {}
   },
   "projects": {
-    "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api(back end).csproj": {
+    "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api(back end).csproj",
-        "projectName": "api(back end)",
-        "projectPath": "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\api(back end).csproj",
+        "projectUniqueName": "C:\\source\\repos\\MIS321\\group10project-mis321\\api\\api.csproj",
+        "projectName": "api",
+        "projectPath": "C:\\source\\repos\\MIS321\\group10project-mis321\\api\\api.csproj",
         "packagesPath": "C:\\Users\\jemak\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\repos\\MIS321\\group10project-mis321\\api(back end)\\obj\\",
+        "outputPath": "C:\\source\\repos\\MIS321\\group10project-mis321\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jemak\\AppData\\Roaming\\NuGet\\NuGet.Config"

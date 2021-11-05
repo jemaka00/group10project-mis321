@@ -1,0 +1,38 @@
+.navbar {
+    background-color: green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: right;
+}
+.navbar li{
+    display: inline;
+    padding: 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.banner{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 75px 0;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#garden1{
+    height: 300px;
+    margin-right: 10px;
+}
+#garden2{
+    height: 300px;
+    margin-right: 10px;
+}
+#garden3{
+    height: 300px;
+}
+.garden_images{
+    text-align: center;
+    padding: 50px 0;
+}

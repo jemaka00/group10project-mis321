@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - New Age v6.0.5 (https://startbootstrap.com/theme/new-age)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-new-age/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
   --bs-blue: #2937f0;
   --bs-indigo: #6610f2;
@@ -11412,7 +11402,7 @@ section {
 section.cta {
   position: relative;
   padding: 15rem 0;
-  background-image: url('https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/1/20/0/CI_intensive-gardening-allows-a-lot-of-produce-to-grow-in-a-small-space.jpg.rend.hgtvcom.616.493.suffix/1452644679836.jpeg');
+  background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/https://d1e00ek4ebabms.cloudfront.net/production/6b75c10d-0b73-4609-ab19-1a5e906e9c3a.jpg?source=next&fit=scale-down&quality=highest&width=1440');
   background-position: center;
   background-size: cover;
 }

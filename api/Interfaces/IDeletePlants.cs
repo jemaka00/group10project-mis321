@@ -2,6 +2,6 @@ namespace api.Interaces
 {
     public interface IDeletePlants
     {
-        public void DeletePlant(int plantID);
+         void DeletePlant(int plantID);
     }
 }

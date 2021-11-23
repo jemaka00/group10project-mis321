@@ -5,6 +5,6 @@ namespace api.interfaces
         public void CreatePlantTable();
         public void CreatePlant(Plant myPlant);
 
-        public void SavePost(IGetPlant myPlant);
+        public void SavePlant(IGetPlant myPlant);
     }
 }

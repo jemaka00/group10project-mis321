@@ -1,4 +1,7 @@
 using api.interfaces;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace api.database
 {
@@ -12,7 +15,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"CREATE TABLE plants(plantID INTERGER PRIMARY KEY AUTO_INCREMENT, plantName TEXT, seasonality TEXT, difficultyLevel INTERGER)";
+            //string stm = @"CREATE TABLE plants(plantID INTERGER PRIMARY KEY AUTO_INCREMENT, plantName TEXT, seasonality TEXT, difficultyLevel INTERGER)";
         }
 
         public void CreatePlant(Plant myPlant)

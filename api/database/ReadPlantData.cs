@@ -7,12 +7,12 @@ namespace api.database
     {
         public List<Plant> GetAllPlants()
         {
-
+            //have to add this to deploy on heroku
         }
 
         public Plant GetPlant(int plantID)
         {
-            
+            //have to add this to deploy on heroku
         }
     }
 }

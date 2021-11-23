@@ -1,4 +1,4 @@
-using group10project_mis321.api.interfaces;
+using api.interfaces;
 using api.database;
 
 namespace api

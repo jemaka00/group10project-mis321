@@ -3,7 +3,7 @@ using api.database;
 
 namespace api
 {
-    public class Plant : ISavePlant
+    public class Plant
     {
         public int plantID {get; set;}
 

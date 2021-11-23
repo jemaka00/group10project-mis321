@@ -1,8 +1,10 @@
+using api.interfaces;
+
 namespace api.database
 {
     public class SavePlants : ISavePlant
     {
-        public static void CreatePlantTable()
+        public void CreatePlantTable()
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -34,7 +36,7 @@ namespace api.database
             cmd.ExecuteNonQuery();
         }
         public void SavePost(IGetPlant myPlant){
-            
+
         }
     }
 }

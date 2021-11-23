@@ -2,7 +2,8 @@ namespace api.Interaces
 {
     public interface ISavePlants
     {
-        public void CreatePost(Plant myPlant);
+        public static void CreatePlantTable();
+        public void CreatePlant(Plant myPlant);
 
         public void SavePost(IGetPlant myPlant);
     }

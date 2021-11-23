@@ -1,9 +1,9 @@
-using api.Interaces;
+using api.interfaces;
 using api.database;
 
 namespace api
 {
-    public class Plant
+    public class Plant : ISavePlant
     {
         public int plantID {get; set;}
 

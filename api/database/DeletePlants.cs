@@ -18,7 +18,7 @@ namespace api.database
 
             cmd.ExecuteNonQuery();
         }
-        void IDeletePosts.DeletePost(int plantID)
+        void IDeletePlants.DeletePlant(int plantID)
         {
 
         }

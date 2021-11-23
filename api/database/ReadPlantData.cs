@@ -1,15 +1,16 @@
-using api.Interaces;
+using api.interfaces;
+using System.Collections.Generic;
 
 namespace api.database
 {
-    public class ReadPostData : IGetAllPosts, IGetPost
+    public class ReadPlantData : IGetAllPlants, IGetPlant
     {
-        public List<Post> GetAllPosts()
+        public List<Plant> GetAllPlants()
         {
 
         }
 
-        public Post GetPost(int plantID)
+        public Plant GetPlant(int plantID)
         {
             
         }

@@ -1,6 +1,6 @@
 namespace api.Interaces
 {
-    public interface IAddPlant
+    public interface IAddPlants
     {
         void AddPlant(Plant myPlant);
     }

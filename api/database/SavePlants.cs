@@ -1,6 +1,6 @@
 namespace api.database
 {
-    public class SavePlants : ISavePlants
+    public class SavePlants : ISavePlant
     {
         public static void CreatePlantTable()
         {
@@ -32,6 +32,9 @@ namespace api.database
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
+        }
+        public void SavePost(IGetPlant myPlant){
+            
         }
     }
 }

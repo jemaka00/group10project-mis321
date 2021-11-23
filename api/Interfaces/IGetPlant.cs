@@ -1,4 +1,4 @@
-namespace api.Interaces
+namespace api.interfaces
 {
     public interface IGetPlant
     {

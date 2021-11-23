@@ -1,4 +1,4 @@
-using api.Interaces;
+using api.interfaces;
 
 namespace api.database
 {

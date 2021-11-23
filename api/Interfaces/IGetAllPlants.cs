@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace api.Interaces
+namespace api.interfaces
 {
     public interface IGetAllPlants
     {

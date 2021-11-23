@@ -1,6 +1,6 @@
 namespace api.interfaces
 {
-    public interface ISavePlants
+    public interface ISavePlant
     {
         public void CreatePlantTable();
         public void CreatePlant(Plant myPlant);

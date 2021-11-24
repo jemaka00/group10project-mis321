@@ -17,9 +17,9 @@ namespace api.database
             con.Open();
 
             string stm = "SELECT * FROM plants";
-            var cmd = new MySqlCommand(stm, con);
+            using var cmd = new MySqlCommand(stm, con);
 
-            MySqlDataReader rdr = cmd.ExecuteReader();
+            using MySqlDataReader rdr = cmd.ExecuteReader();
 
             List<Plant> plants = new List<Plant>();
 
@@ -29,8 +29,13 @@ namespace api.database
                 {
                     plantID = rdr.GetInt32(0),
                     plantName = rdr.GetString(1),
-                    seasonality = rdr.GetString(2),
-                    difficultyLevel = rdr.GetInt32(3)
+                    plantType = rdr.GetString(2),
+                    seasonality = rdr.GetString(3),
+                    difficultyLevel = rdr.GetInt32(4),
+                    amountOfWater = rdr.GetString(5),
+                    amountOfSun = rdr.GetString(6),
+                    animalAttraction = rdr.GetString(7),
+                    plantImage = rdr.GetString(8)
 
                 };
 

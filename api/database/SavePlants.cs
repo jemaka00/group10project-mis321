@@ -7,16 +7,6 @@ namespace api.database
 {
     public class SavePlants : ISavePlant
     {
-        public void CreatePlantTable()
-        {
-            ConnectionString myConnection = new ConnectionString();
-            string cs = myConnection.cs;
-
-            using var con = new MySqlConnection(cs);
-            con.Open();
-
-            //string stm = @"CREATE TABLE plants(plantID INTERGER PRIMARY KEY AUTO_INCREMENT, plantName TEXT, seasonality TEXT, difficultyLevel INTERGER)";
-        }
 
         public void CreatePlant(Plant myPlant)
         {

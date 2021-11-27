@@ -12,35 +12,48 @@ namespace api.Controllers
     public class plantsController : ControllerBase
     {
         // GET: api/plants
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Plant> Get()
         {
-            return new string[] { "value1", "value2" };
+            IGetAllPlants readObject = new ReadPlantData();
+            return readObject.GetAllPlants();
         }
 
         // GET: api/plants/5
+        [EnableCors("AnotherPolicy")]
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Plant Get(int id)
         {
-            return "value";
+            IGetPlant readObject = new ReadPlantData();
+            return readObject.GetPlant(id);
         }
 
         // POST: api/plants
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            SavePlants insertObject = new SavePlants();
+            insertObject.CreatePlant(value);
         }
 
         // PUT: api/plants/5
+        [EnableCors("AnotherPolicy")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Plant value)
         {
+            ISavePlant editObject = new SavePlants();
+            editObject.SavePost(value);
         }
 
         // DELETE: api/plants/5
+        [EnableCors("AnotherPolicy")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            IDeletePlants deleteObject = new DeletePlants();
+            deleteObject.DeletePlant(id);
         }
     }
 }

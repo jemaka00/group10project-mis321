@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using api.database;
 using api.interfaces;
-using api;
 
 namespace api.Controllers
 {
@@ -15,14 +14,13 @@ namespace api.Controllers
     [ApiController]
     public class employeeController : ControllerBase
     {
-
-        // GET: api/employee/5
+        // GET: api/plants
         [EnableCors("AnotherPolicy")]
-        [HttpGet("{id}", Name = "Get")]
-        public Employee Get(int id)
+        [HttpGet]
+        public List<Employee> Get()
         {
             IGetEmployee readObject = new GetEmployee();
-            return readObject.GetEmployee(id);
+            return readObject.GetAllEmployees();
         }
     }
 }

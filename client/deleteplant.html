@@ -38,7 +38,11 @@
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
-                    <h1 class="mt-4">Delete plant functionality here</h1>
+                    <form onsubmit="return false"; method="remove">
+                        <label for="plantID">Plant ID:</label><br>
+                        <input type="dropdown" id="plantID" name="plantID">
+                        <input type="submit" value="Delete Plant" name="submit" onclick="removePlant(plantID)"/>
+                    </form>
                 </div>
             </div>
         </div>

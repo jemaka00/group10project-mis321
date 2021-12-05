@@ -38,7 +38,46 @@
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
-                    <h1 class="mt-4">Add plant functionality here</h1>
+                    <form onsubmit="return false"; method="post">
+                        <ul>
+                            <li>
+                                <label for="plantName">Plant name:</label><br>
+                                <input type="text" id="plantName" name="plantName"><br>
+                            </li>
+                            <li>
+                                <label for="plantType">Plant Type:</label><br>
+                                <input type="text" id="plantType" name="plantType">
+                            </li>
+                            <li>
+                                <label for="seasonality">Seasonality:</label><br>
+                                <input type="text" id="seasonality" name="seasonality">
+                            </li>
+                            <li>
+                                <label for="difficultyLevel">Difficulty Level (1, 2, or 3):</label><br>
+                                <input type="text" id="difficultyLevel" name="difficultyLevel">
+                            </li>
+                            <li>
+                                <label for="amountOfWater">Amount Of Water:</label><br>
+                                <input type="text" id="amountOfWater" name="amountOfWater">
+                            </li>
+                            <li>
+                                <label for="amountOfSun">Amount Of Sun:</label><br>
+                                <input type="text" id="amountOfSun" name="amountOfSun">
+                            </li>
+                            <li>
+                                <label for="animalAttraction">Animal Attraction:</label><br>
+                                <input type="text" id="animalAttraction" name="animalAttraction">
+                            </li>
+                            <li>
+                                <label for="plantImage">Plant Image URL:</label><br>
+                                <input type="text" id="plantImage" name="plantImage">
+                            </li>
+                            <input type="submit" value="Add Plant" name="submit" onclick="addPlant()"/>
+                        </ul>
+                      </form>
+                </div>
+                <div id="plants">
+        
                 </div>
             </div>
         </div>

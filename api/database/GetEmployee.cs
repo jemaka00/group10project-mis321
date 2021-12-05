@@ -1,10 +1,14 @@
 using api.interfaces;
+using System.Collections.Generic;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace api.database
 {
-    public class GetEmployeem: IGetEmployee
+    public class GetEmployee : IGetEmployee
     {
-        public Employee GetEmployee(int employeeID)
+        public List<Employee> GetAllEmployees()
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -12,26 +16,28 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = "SELECT * FROM employee WHERE employeeID = @empID";
-            var cmd = new MySqlCommand(stm, con);
+            string stm = "SELECT * FROM employee";
+            using var cmd = new MySqlCommand(stm, con);
 
-            cmd.Parameters.AddWithValue("@plantID", employeeID);
-            cmd.Prepare();
+            using MySqlDataReader rdr = cmd.ExecuteReader();
 
-            MySqlDataReader rdr = cmd.ExecuteReader();
+            List<Employee> employees = new List<Employee>();
 
-            rdr.Read();
-
-            Employee e = new Employee()
+            while (rdr.Read())
             {
-                employeeID = rdr.GetInt32(0),
-                empFName = rdr.GetString(1),
-                empLName = rdr.GetString(2),
-                empEmail = rdr.GetString(3),
-                empPassword = rdr.GetString(4)
-            };
+                Employee e = new Employee()
+                {
+                    employeeID = rdr.GetInt32(0),
+                    empFName = rdr.GetString(1),
+                    empLName = rdr.GetString(2),
+                    empEmail = rdr.GetString(3),
+                    empPassword = rdr.GetString(4)
+                };
 
-            return p;
+                employees.Add(e);
+            }
+
+            return employees;
         }
     }
 }

@@ -36,7 +36,7 @@ namespace api.Controllers
         // POST: api/plants
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Plant value)
         {
             SavePlants insertObject = new SavePlants();
             insertObject.CreatePlant(value);
@@ -48,7 +48,7 @@ namespace api.Controllers
         public void Put(int id, [FromBody] Plant value)
         {
             ISavePlant editObject = new SavePlants();
-            editObject.SavePost(value);
+            editObject.SavePlant(value);
         }
 
         // DELETE: api/plants/5

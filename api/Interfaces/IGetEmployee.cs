@@ -1,7 +1,9 @@
+using System.Collections.Generic;
+
 namespace api.interfaces
 {
     public interface IGetEmployee
     {
-         public Employee GetEmployee(int employeeID);
+         public List<Employee> GetAllEmployees();
     }
 }

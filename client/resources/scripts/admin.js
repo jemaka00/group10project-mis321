@@ -24,3 +24,75 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+getPlant = function(){
+    const plantsApiUrl = "https://localhost:5001/api/plants"
+
+    fetch(plantsApiUrl).then(function(response){
+        console.log(response);
+        return response.json();
+    }).then(function(json){
+        console.log(json);
+        displayPlants(json);
+    }).catch(function(error){
+        console.log(error);
+    });
+}
+
+function displayPlants(json){
+    let html = 
+    json.forEach((plants)=>{
+        
+    });
+    document.getElementById("plants").innerHTML = html;
+}
+
+addPlant = function(){
+    const plantsApiUrl = "https://localhost:5001/api/plants";
+    const plantName = document.getElementById("plantName").value;
+    const plantType = document.getElementById("plantType").value;
+    const seasonality = document.getElementById("seasonality").value;
+    const difficultyLevel = document.getElementById("difficultyLevel").value;
+    const amountOfWater = document.getElementById("amountOfWater").value;
+    const amountOfSun = document.getElementById("amountOfSun").value;
+    const animalAttraction = document.getElementById("animalAttraction").value;
+    const plantImage = document.getElementById("plantImage").value;
+
+    fetch(plantsApiUrl, {
+        method: "POST",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json',
+        },
+        body: JSON.stringify({
+            plantName : plantName,
+            plantType : plantType,
+            seasonality : seasonality,
+            difficultyLevel : difficultyLevel,
+            amountOfWater : amountOfWater,
+            amountOfSun :amountOfSun,
+            animalAttraction : animalAttraction,
+            plantImage : plantImage
+        })
+    })
+    .then((response)=>{
+        console.log(response);
+        getPlant();
+    })
+}
+
+function removePlant(plantID){
+    const deletePlantApiUrl = "https://localhost:5001/api/plants/"+plantID;
+
+    fetch(deletePlantApiUrl, {
+        method: "DELETE",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json',
+        },
+    })
+    .then((response)=>{
+        console.log(response);
+        getPlant();
+    })
+}

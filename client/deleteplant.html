@@ -11,7 +11,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/admin.css" rel="stylesheet" />
     </head>
-    <body>
+    <body onload="getPlant()">
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
@@ -37,12 +37,7 @@
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid">
-                    <form onsubmit="return false"; method="remove">
-                        <label for="plantID">Plant ID:</label><br>
-                        <input type="text" id="plantID" name="plantID">
-                        <input type="submit" value="Delete Plant" name="submit" onclick="removePlant(plantID)"/>
-                    </form>
+                <div id="plants">
                 </div>
             </div>
         </div>

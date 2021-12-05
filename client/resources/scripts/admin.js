@@ -40,10 +40,13 @@ getPlant = function(){
 }
 
 function displayPlants(json){
-    let html = 
+    let html = "<table style=\"width:100%\">";
+    html += "<tr><th>Plant Name</th><th>Delete</th>"
     json.forEach((plants)=>{
-        
+        html += "<tr key= " + plants.plantID + "><td>" + plants.plantName +
+        "<td><button onclick = \"removePlant("+plants.plantID+")\">Delete</button></td></tr>";
     });
+    html += "</tr></table>";
     document.getElementById("plants").innerHTML = html;
 }
 

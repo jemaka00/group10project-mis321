@@ -32,3 +32,25 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+getPlant = function(){
+    const plantsApiUrl = "https://localhost:5001/api/plants"
+
+    fetch(plantsApiUrl).then(function(response){
+        console.log(response);
+        return response.json();
+    }).then(function(json){
+        console.log(json);
+        displayPlants(json);
+    }).catch(function(error){
+        console.log(error);
+    });
+}
+
+function displayPlants(json){
+    let html = 
+    json.forEach((plants)=>{
+        
+    });
+    document.getElementById("plants").innerHTML = html;
+}

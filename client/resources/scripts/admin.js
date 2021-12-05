@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 getPlant = function(){
-    const plantsApiUrl = "https://localhost:5001/api/plants"
+    const plantsApiUrl = "https://gardening-group10-database.herokuapp.com/api/plants"
 
     fetch(plantsApiUrl).then(function(response){
         console.log(response);
@@ -48,7 +48,7 @@ function displayPlants(json){
 }
 
 addPlant = function(){
-    const plantsApiUrl = "https://localhost:5001/api/plants";
+    const plantsApiUrl = "https://gardening-group10-database.herokuapp.com/api/plants";
     const plantName = document.getElementById("plantName").value;
     const plantType = document.getElementById("plantType").value;
     const seasonality = document.getElementById("seasonality").value;
@@ -82,7 +82,7 @@ addPlant = function(){
 }
 
 function removePlant(plantID){
-    const deletePlantApiUrl = "https://localhost:5001/api/plants/"+plantID;
+    const deletePlantApiUrl = "https://gardening-group10-database.herokuapp.com/api/plants"+plantID;
 
     fetch(deletePlantApiUrl, {
         method: "DELETE",

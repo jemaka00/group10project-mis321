@@ -82,7 +82,7 @@ addPlant = function(){
 }
 
 function removePlant(plantID){
-    const deletePlantApiUrl = "https://gardening-group10-database.herokuapp.com/api/plants"+plantID;
+    const deletePlantApiUrl = "https://gardening-group10-database.herokuapp.com/api/plants/"+plantID;
 
     fetch(deletePlantApiUrl, {
         method: "DELETE",

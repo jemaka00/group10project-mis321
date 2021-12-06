@@ -99,35 +99,3 @@ function removePlant(plantID){
         getPlant();
     })
 }
-
-function handleOnLoad(empEmail){
-    const postURL = `https://gardening-group10-database.herokuapp.com/api/employee/${empEmail}`;
-    fetch(postURL).then(function(response){
-        return response.json();
-    }).then(function(json){
-        console.log(json);
-        loginOnClick(json);
-    }).catch(function(error){
-        console.log(error);
-    });
-}
-
-async function loginOnClick(json) {
-    var emailval = document.getElementById("empEmail").value;
-    var pass = document.getElementById("empPassword").value;
-
-    try{
-        if (emailval=json[0].email)
-        {
-            if (pass=json[0].password)
-            {
-                var user = json[0];
-                sessionStorage.setItem('user', JSON.stringify(user));
-            }
-        }
-    }
-    catch{
-        var html = "<input type='password' id='pass' name='password' placeholder='Password'><br><br><div style='color: red'>Incorrect email or password. Try again</div>";
-        document.getElementById("pass").outerHTML = html
-    }
-}

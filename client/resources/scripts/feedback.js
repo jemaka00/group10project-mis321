@@ -23,7 +23,7 @@ function displayFeedback(json){
     document.getElementById("feedback").innerHTML = html;
 }
 
-addPlant = function(){
+addFeedback = function(){
     const plantsApiUrl = "https://gardening-group10-database.herokuapp.com/api/feedback";
     const customerName = document.getElementById("customerName").value;
     const customerEmail = document.getElementById("customerEmail").value;

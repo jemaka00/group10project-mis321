@@ -16,22 +16,11 @@ function displayFeedback(json){
     let html = "<table style=\"width:100%\">";
     html += "<tr><th>Customer Email</th><th>Feedback</th><th>Delete</th>"
     json.forEach((feedback)=>{
-        html += "<tr key= " + feedback.customerID + "><td>" + feedback.customerEmail + "</td><td>" + feedback.feedback
+        html += "<tr key= " + feedback.customerID + "><td>" + feedback.customerEmail + "</td><td>" + feedback.feedback +
         "</td><td><button onclick = \"removeFeedback("+feedback.customerID+")\">Delete</button></td></tr>";
     });
     html += "</table>";
     document.getElementById("feedback").innerHTML = html;
-}
-
-function displayPlants(json){
-    let html = "<table style=\"width:100%\">";
-    html += "<tr><th>Customer Email</th><th>Feedback</th><th>Delete</th>"
-    json.forEach((plants)=>{
-        html += "<tr key= " + plants.plantID + "><td>" + plants.plantName +
-        "<td><button onclick = \"removePlant("+plants.plantID+")\">Delete</button></td></tr>";
-    });
-    html += "</tr></table>";
-    document.getElementById("plants").innerHTML = html;
 }
 
 addFeedback = function(){

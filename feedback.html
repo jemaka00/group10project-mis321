@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="resources/css/homepage.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="home.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid">
+                <form onsubmit="return false"; method="post">
+                    <ul>
+                        <li>
+                            <label for="customerName">Name:</label><br>
+                            <input type="text" id="customerName" name="customerName"><br>
+                        </li>
+                        <li>
+                            <label for="customerEmail">Email:</label><br>
+                            <input type="text" id="customerEmail" name="customerEmail">
+                        </li>
+                        <li>
+                            <label for="phoneNumber">Phone Number:</label><br>
+                            <input type="text" id="phoneNumber" name="phoneNumber">
+                        </li>
+                        <li>
+                            <label for="feedback">Message:</label><br>
+                            <input type="text" id="feedback" name="feedback">
+                        </li>
+                        <input type="submit" value="Submit" name="submit" onclick="addFeedback()"/>
+                    </ul>
+                  </form>
+            </div>
+            <div>Form submission successful!</div>
+        </div>
+    </div>
+</body>
+</html>

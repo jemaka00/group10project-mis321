@@ -16,8 +16,8 @@ function displayPlants(json){
     let html = "";
     json.forEach((plants)=>{
         html += "<div class = \"polaroid\">";
-        html += "<img src = \"" + plants.plantImage + "\" style=\"width:100%\"></img>";
-        html += "<div><p><b>Name: </b>" + plants.plantName + "&emsp;<b>Type: </b>" + plants.plantType + "</p>";
+        html += "<img src = \"" + plants.plantImage + "\" width=\"100%\" height=\"250px\"></img>";
+        html += "<p><b>Name: </b>" + plants.plantName + "&emsp;<b>Type: </b>" + plants.plantType + "</p>";
         html += "<p><b>Seasonality: </b>" + plants.seasonality + "&emsp;<b>Difficulty: </b>" + plants.difficultyLevel + "</p>";
         html += "<p><b>Water Level: </b>" + plants.amountOfWater + "</p>";
         html += "<p><b>Sun Level: </b>" + plants.amountOfSun + "</p>";

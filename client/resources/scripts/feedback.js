@@ -24,13 +24,13 @@ function displayFeedback(json){
 }
 
 addFeedback = function(){
-    const plantsApiUrl = "https://gardening-group10-database.herokuapp.com/api/feedback";
+    const feedbackApiUrl = "https://gardening-group10-database.herokuapp.com/api/feedback";
     const customerName = document.getElementById("customerName").value;
     const customerEmail = document.getElementById("customerEmail").value;
     const phoneNumber = document.getElementById("phoneNumber").value;
     const feedback = document.getElementById("feedback").value;
 
-    fetch(plantsApiUrl, {
+    fetch(feedbackApiUrl, {
         method: "POST",
         headers: {
             "Accept": 'application/json',

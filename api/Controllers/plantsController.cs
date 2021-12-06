@@ -38,7 +38,7 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody] Plant value)
         {
-            ISavePlant insertObject = new SavePlants();
+            SavePlants insertObject = new SavePlants();
             insertObject.CreatePlant(value);
         }
 

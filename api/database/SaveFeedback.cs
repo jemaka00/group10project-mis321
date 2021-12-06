@@ -34,11 +34,10 @@ namespace api.database
             string cs = myConnection.cs;
             using var con = new MySqlConnection(cs);
             con.Open();
-             string stm = @"UPDATE feedback set customerID = @customerID, customerName = @customerName, 
-             customerEmail = @customerEmail, phoneNumber = @phoneNumber, feedback = @feedback WHERE customerID = @customerID";
+            string stm = @"UPDATE feedback set customerName = @customerName, customerEmail = @customerEmail, 
+            phoneNumber = @phoneNumber, feedback = @feedback WHERE customerID = @customerID";
             using var cmd = new MySqlCommand(stm, con);
             
-            cmd.Parameters.AddWithValue("@customerID", myFeedback.customerID);
             cmd.Parameters.AddWithValue("@customerName", myFeedback.customerName);
             cmd.Parameters.AddWithValue("@customerEmail", myFeedback.customerEmail);
             cmd.Parameters.AddWithValue("@phoneNumber", myFeedback.phoneNumber);

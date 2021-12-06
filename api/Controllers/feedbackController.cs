@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using api.interfaces;
+using Microsoft.AspNetCore.Cors;
 using api.database;
+using api.interfaces;
 
 namespace api.Controllers
 {
@@ -14,6 +15,7 @@ namespace api.Controllers
     public class feedbackController : ControllerBase
     {
         // GET: api/feedback
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<Feedback> Get()
         {
@@ -22,14 +24,16 @@ namespace api.Controllers
         }
 
         // POST: api/feedback
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
         public void Post([FromBody] Feedback value)
         {
-            ISaveFeedback insertObject = new SaveFeedback();
+            SaveFeedback insertObject = new SaveFeedback();
             insertObject.CreateFeedback(value);
         }
 
         // DELETE: api/feedback/5
+        [EnableCors("AnotherPolicy")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
